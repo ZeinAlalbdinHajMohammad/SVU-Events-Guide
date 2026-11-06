@@ -1,0 +1,97 @@
+body {                                                      /* we chose Tajawal font and light background */
+    font-family: 'Tajawal', sans-serif;                     /* for the page and used flex column here */
+    background-color: #f8f9fa;                              /* so the footer stays always at the bottom */
+    color: #212529;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-navbar, .custom-footer {                            /* primary dark blue color for the navbar */
+    background-color: #1e40af;                              /* and the footer at the end of the page */
+}
+
+.custom-footer {                                            /* push the footer down and make the writing */
+    margin-top: auto;                                       /* color white inside it */
+    color: #ffffff;
+}
+
+.bg-section-alt {                                           /* light blue background to distinguish */
+    background-color: #eef2ff;                              /* the secondary sections in the pages */
+}
+
+.logo-img {                                                 /* set small dimensions for the logo image */
+    width: 35px;                                            /* in the header with soft corners */
+    height: 35px;
+    margin-left: 8px;
+    border-radius: 4px;
+}
+
+.section-title {                                            /* make the title of every section bold */
+    font-size: 1.4rem;                                      /* and leave a small space under it */
+    font-weight: bold;
+    padding-right: 10px;
+    margin-bottom: 20px;
+}
+
+.event-card {                                               /* add a simple border and smooth movement */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;  /* when putting the mouse on the event card */
+    border: 2px solid #e5e7eb;
+}
+
+.event-card:hover {
+    transform: translateY(-4px);
+}
+
+.slider-img {                                               /* fix the height of the slider and cards */
+    height: 350px;                                          /* pictures and use cover so the images */
+    object-fit: cover;                                      /* do not stretch inside the boxes */
+}
+
+.event-card-img {
+    height: 190px;
+    object-fit: cover;
+}
+
+.detail-main-img {                                          /* set the size of the main picture and */
+    max-height: 360px;                                      /* the small gallery pictures in details page */
+    width: 100%;
+    object-fit: cover;
+}
+
+.detailCategory {
+    width: fit-content;
+}
+
+.gallery-img {
+    height: 140px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.team-img {                                                 /* make the personal pictures of the team */
+    width: 80px;                                            /* small and round like a circle */
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.contact-info {                                             /* make the social links in the footer white */
+    color: #ffffff;                                       
+    text-decoration: none;
+}
+
+.contact-info-con {                                         /* Make the social media links on the Contact */
+    color: #090909;                                       /* page black*/
+    text-decoration: none;
+}
+
+.contact-info:hover ,.contact-info-con:hover  {             /* and show a line under them on mouse hover */
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {                                 /* reduce the height of the slider picture */
+    .slider-img {                                           /* when opening the site from a mobile phone */
+        height: 220px;
+    }
+}

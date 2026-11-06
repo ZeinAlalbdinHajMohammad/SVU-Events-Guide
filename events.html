@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل فعاليات الجامعة الافتراضية - الفعاليات</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+    <header class="sticky-top"> 
+        <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">
+                    <img src="assets/img/logo.png" class="logo-img">
+                    دليل فعاليات SVU
+                </a>
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto ">
+                        <li><a class="nav-link" href="index.html">الرئيسية</a></li>
+                        <li><a class="nav-link active" href="events.html">الفعاليات</a></li>
+                        <li><a class="nav-link" href="event.html?id=1">تفاصيل الفعالية</a></li>
+                        <li><a class="nav-link" href="about.html">عن الدليل</a></li>
+                        <li><a class="nav-link" href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-4">
+
+        <section class="mb-4 ">
+            <h1 class="section-title">الفعاليات</h1>
+            <p>يمكنك تصفية الفعاليات حسب التصنيف أو الموقع أو التاريخ للوصول للفعالية المطلوبة.</p>
+        </section>
+
+        <section class="p-3 mb-4 bg-section-alt rounded border shadow-sm">
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <label class="form-label">التصنيف:</label>
+                    <select id="categorySelect" class="form-select" onchange="filterEvents()">
+                        <option value="all">الكل</option>
+                        <option value="تقنية وعلمية">تقنية وعلمية</option>
+                        <option value="ثقافة">ثقافة</option>
+                        <option value="رياضة">رياضة</option>
+                        <option value="موسيقى وفنون">موسيقى وفنون</option>
+                        <option value="عائلي واجتماعي">عائلي واجتماعي</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">الموقع:</label>
+                    <select id="locationSelect" class="form-select" onchange="filterEvents()">
+                        <option value="all">الكل</option>
+                        <option value="دمشق">دمشق</option>
+                        <option value="حلب">حلب</option>
+                        <option value="اللاذقية">اللاذقية</option>
+                        <option value="حمص">حمص</option>
+                        <option value="طرطوس">طرطوس</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">التاريخ:</label>
+                    <input type="date" id="dateInput" class="form-control" onchange="filterEvents()">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="row g-4" id="eventsContainer">
+
+                <div class="col-md-4 event-box">
+                        <div class="card h-100 event-card shadow-sm">
+                            <img src="assets/img/event1.jpg" class="card-img-top event-card-img">
+                            <div class="card-body">
+                                <span class="badge bg-success mb-2 event-category">تقنية وعلمية</span>
+                                <h5 class="card-title">ندوة مشاريع التخرج</h5>
+                                <p class="card-text">شرح خطوات اختيار مشروع التخرج وتوزيع المهام بين الطلاب.</p>
+                                
+                            <p class="small text-muted mb-1">المكان: <span class="event-location">دمشق</span></p>
+                            <p class="small text-muted">التاريخ: <span class="event-date">2026-11-10</span></p>
+                                <a href="event.html?id=1" class="btn btn-sm btn-outline-primary">التفاصيل</a>
+                            </div>
+                        </div>
+                    </div>
+                
+                <div class="col-md-4 event-box">
+                    <div class="card h-100 event-card shadow-sm">
+                        <img src="assets/img/event2.jpg" class="card-img-top event-card-img">
+                        <div class="card-body">
+                            <span class="badge bg-success mb-2 event-category">تقنية وعلمية</span>
+                            <h5 class="card-title">ورشة تصميم الويب</h5>
+                            <p class="card-text">تدريب عملي للمبتدئين على تطوير واجهات المواقع الإلكترونية.</p>
+                            <p class="small text-muted mb-1">المكان: <span class="event-location">حلب</span></p>
+                            <p class="small text-muted">التاريخ: <span class="event-date">2026-11-12</span></p>
+                            <a href="event.html?id=2" class="btn btn-sm btn-outline-primary">التفاصيل</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 event-box">
+                    <div class="card h-100 event-card shadow-sm">
+                        <img src="assets/img/event3.jpg" class="card-img-top event-card-img">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2 event-category">ثقافة</span>
+                            <h5 class="card-title">معرض تبادل الكتب</h5>
+                            <p class="card-text">مبادرة طلابية لتبادل الكتب والروايات والملخصات الدراسية مجاناً.</p>
+                            <p class="small text-muted mb-1">المكان: <span class="event-location">اللاذقية</span></p>
+                            <p class="small text-muted">التاريخ: <span class="event-date">2026-11-15</span></p>
+                            <a href="event.html?id=3" class="btn btn-sm btn-outline-primary">التفاصيل</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 event-box">
+                    <div class="card h-100 event-card shadow-sm">
+                        <img src="assets/img/event4.jpg" class="card-img-top event-card-img">
+                        <div class="card-body">
+                            <span class="badge bg-danger mb-2 event-category">رياضة</span>
+                            <h5 class="card-title">بطولة الشطرنج الجامعية</h5>
+                            <p class="card-text">منافسات فردية بالشطرنج لجميع طلاب الجامعة الافتراضية.</p>
+                            <p class="small text-muted mb-1">المكان: <span class="event-location">حمص</span></p>
+                            <p class="small text-muted">التاريخ: <span class="event-date">2026-11-20</span></p>
+                            <a href="event.html?id=4" class="btn btn-sm btn-outline-primary">التفاصيل</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 event-box">
+                    <div class="card h-100 event-card shadow-sm">
+                        <img src="assets/img/event5.jpg" class="card-img-top event-card-img">
+                        <div class="card-body">
+                            <span class="badge bg-warning text-dark mb-2 event-category">موسيقى وفنون</span>
+                            <h5 class="card-title">أمسية المواهب الطلابية</h5>
+                            <p class="card-text">عرض للمواهب الفردية في العزف الموسيقي والرسم والتصميم.</p>
+                            <p class="small text-muted mb-1">المكان: <span class="event-location">دمشق</span></p>
+                            <p class="small text-muted">التاريخ: <span class="event-date">2026-11-25</span></p>
+                            <a href="event.html?id=5" class="btn btn-sm btn-outline-primary">التفاصيل</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 event-box">
+                    <div class="card h-100 event-card shadow-sm">
+                        <img src="assets/img/event6.jpg" class="card-img-top event-card-img">
+                        <div class="card-body">
+                            <span class="badge bg-secondary mb-2 event-category">عائلي واجتماعي</span>
+                            <h5 class="card-title">لقاء الخريجين السنوي</h5>
+                            <p class="card-text">لقاء اجتماعي يجمع الخريجين وعائلاتهم مع الطلاب الحاليين.</p>
+                            <p class="small text-muted mb-1">المكان: <span class="event-location">طرطوس</span></p>
+                            <p class="small text-muted">التاريخ: <span class="event-date">2026-11-28</span></p>
+                            <a href="event.html?id=6" class="btn btn-sm btn-outline-primary">التفاصيل</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="custom-footer text-center py-3">
+        <div class="container">
+            <p class="mb-1 ">تواصل معنا: 
+                <a class="contact-info" href="mailto:info@svuonline.org">info@svuonline.org</a> | هاتف:
+                <a class="contact-info" href="tel:+963112113456">0112113456</a>   
+            </p>
+            <p class="mb-2">
+                <a href="https://www.facebook.com/svuonline.org" target="_blank" class="text-white text-decoration-none mx-2"><i class="bi bi-facebook"></i> فيسبوك</a> |
+                <a href="https://www.instagram.com/syrian_virtual_university" target="_blank" class="text-white text-decoration-none mx-2"><i class="bi bi-instagram"></i> انستجرام</a> |
+                <a href="https://t.me/Syrianvirtualuniversity" target="_blank" class="text-white text-decoration-none mx-2"><i class="bi bi-telegram"></i> تلغرام</a> |
+                <a href="https://www.linkedin.com/company/syrianvirtualuniversity" target="_blank" class="text-white text-decoration-none mx-2"><i class="bi bi-linkedin"></i> لينكدإن</a>
+            </p>
+            <p class="small mb-0">جميع الحقوق محفوظة &copy; 2026 - دليل فعاليات الجامعة الافتراضية</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
